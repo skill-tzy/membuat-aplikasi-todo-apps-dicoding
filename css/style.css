@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Raleway&display=swap');
 
-* {
+*, *::before, *::after {
     box-sizing: border-box;
 }
 
@@ -32,7 +32,6 @@ header {
     flex-grow: 1;
     height: fit-content;
 }
-
 
 .item {
     border-radius: 16px;
@@ -116,11 +115,10 @@ input[type=text], input[type=date], .btn-submit:focus {
 }
 
 .check-button {
-    width: 40px;
-    height: 40px;
-
     background: url('../assets/check-outline.svg');
     background-size: contain;
+    width: 40px;
+    height: 40px;
     margin-left: auto;
     cursor: pointer;
     border: none;
@@ -132,11 +130,10 @@ input[type=text], input[type=date], .btn-submit:focus {
 }
 
 .trash-button {
-    width: 40px;
-    height: 40px;
-
     background: url('../assets/trash-outline.svg');
     background-size: contain;
+    width: 40px;
+    height: 40px;
     margin-left: 16px;
     cursor: pointer;
     border: none;
@@ -148,11 +145,10 @@ input[type=text], input[type=date], .btn-submit:focus {
 }
 
 .undo-button {
-    width: 40px;
-    height: 40px;
-
     background: url('../assets/undo-ouline.svg');
     background-size: contain;
+    width: 40px;
+    height: 40px;
     margin-left: auto;
     cursor: pointer;
     border: none;
@@ -166,7 +162,6 @@ input[type=text], input[type=date], .btn-submit:focus {
 .check-button:focus, .trash-button {
     outline: none;
 }
-
 
 @media only screen and (max-width: 1024px) {
     .wrapper {
