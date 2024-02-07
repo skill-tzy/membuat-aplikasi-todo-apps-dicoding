@@ -159,8 +159,9 @@ document.addEventListener('DOMContentLoaded', function () {
     }
     return true;
   }
-  document.addEventListener(SAVED_EVENT, function () {
-    console.log(localStorage.getItem(STORAGE_KEY));
+  document.addEventListener(SAVED_EVENT, function() {
+    const storedData = localStorage.getItem(STORAGE_KEY);
+    showToast(`Todo List telah diperbarui`);
   });
   function loadDataFromStorage() {
     const serializedData = localStorage.getItem(STORAGE_KEY);
@@ -173,4 +174,15 @@ document.addEventListener('DOMContentLoaded', function () {
     }
    
     document.dispatchEvent(new Event(RENDER_EVENT));
+  }
+  function showToast(message) {
+    const toast = document.createElement('div');
+    toast.className = 'toast';
+    toast.textContent = message;
+  
+    document.body.appendChild(toast);
+  
+    setTimeout(() => {
+      document.body.removeChild(toast);
+    }, 3000); // Hide the toast after 3 seconds (adjust as needed)
   }
